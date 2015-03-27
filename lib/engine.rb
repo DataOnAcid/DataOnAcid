@@ -16,6 +16,14 @@ class DataOnAcid < Sinatra::Base
     set :root, File.join(File.dirname(__FILE__), "..")
   end
 
+  get "/" do
+    erb :index
+  end
+
+  post "/" do
+    request["data"]
+  end
+
   get "/view/:type" do |type|
     renderer = @renderers[type] || @renderers["default"]
     content = case renderer[:include]

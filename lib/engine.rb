@@ -3,7 +3,7 @@ require 'bundler/setup'
 require 'sinatra/base'
 require 'yaml'
 
-class OpenScienceRender < Sinatra::Base
+class DataOnAcid < Sinatra::Base
 
   def initialize
     super

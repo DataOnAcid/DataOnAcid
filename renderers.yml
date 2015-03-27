@@ -2,7 +2,7 @@ audio-mangler:
   :include: <audio controls>Your browser does not support the audio element.<source src="%s" type="audio/wav"></audio>
   :script: cd ../AudioRenderer; ./convert_audio.sh
 visual-mangler:
-  :include: <img src="%s" />
+  :include: <iframe src="%s" width="800" height="800"></iframe>
   :script: cd ../VisualRenderer; ./visual-mangler
 remote-image:
   :include: <img src="%s" />

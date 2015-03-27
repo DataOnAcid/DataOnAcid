@@ -1,6 +1,11 @@
 <h1>Data On Acid</h1>
 
-<form method="POST">
-  <input type="text" name="data" />
+<form method="POST" action="view">
+  URI: <input type="text" name="url" />
+  <select name="renderer">
+    <% renderers.each do |renderer| %>
+      <option value="<%= renderer %>"><%= renderer %></option>
+    <% end %>
+  </select>
   <input type="submit" value="Go" />
 </form>

@@ -17,20 +17,16 @@ class DataOnAcid < Sinatra::Base
   end
 
   get "/" do
-    erb :index
+    erb :index, :locals => { :renderers => @renderers.keys }
   end
 
-  post "/" do
-    request["data"]
-  end
-
-  get "/view/:type" do |type|
-    renderer = @renderers[type] || @renderers["default"]
+  post "/view" do
+    renderer = @renderers[request[:renderer]] || @renderers["default"]
     content = case renderer[:include]
               when :inline, :none
                 `#{renderer[:script]} #{request[:url]}`
               else
-                renderer[:include] % "/render/#{type}?url=#{request[:url]}"
+                renderer[:include] % "/render/#{request[:renderer]}?url=#{request[:url]}"
               end
 
     renderer[:include] == :none ? content : "<html><body>#{content}</body></html>"

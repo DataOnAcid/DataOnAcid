@@ -1,4 +1,7 @@
-test-image:
+remote-image:
+  :include: <img src="%s" />
+  :script: renderers/remote-image
+local-image:
   :include: <img src="%s" />
   :script: cat
 default:

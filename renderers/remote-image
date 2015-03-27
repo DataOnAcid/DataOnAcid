@@ -1,0 +1,6 @@
+#!/bin/sh
+
+rm -f output
+wget -qO output $1
+cat output
+rm -f output

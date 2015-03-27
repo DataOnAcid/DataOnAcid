@@ -1,7 +1,7 @@
-OpenScienceRender
-=================
+DataOnAcid
+==========
 
-Web service providing html renders of research data formats.
+Web service providing renders of research data formats.
 
 A ruby app using [sinatra](http://www.sinatrarb.com/).
 

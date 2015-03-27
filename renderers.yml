@@ -1,15 +1,3 @@
-gff3:
-  :include: <img src="%s" />
-  :script: ../gff2svg/gff2svg
-gffdiff:
-  :include: <img src="%s" />
-  :script: ../gff2svg/gffdiff
-newick:
-  :include: :none
-  :script: ruby ../phylo-renderer/phylo-renderer
-tiff:
-  :include: <img src="%s" />
-  :script: ../tiff2png/tiff2png
 test-image:
   :include: <img src="%s" />
   :script: cat

@@ -1,3 +1,6 @@
+visual-mangler:
+  :include: <img src="%s" />
+  :script: cd ../VisualRenderer; ./visual-mangler
 remote-image:
   :include: <img src="%s" />
   :script: renderers/remote-image

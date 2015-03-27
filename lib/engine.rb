@@ -29,7 +29,7 @@ class DataOnAcid < Sinatra::Base
                 renderer[:include] % "/render/#{request[:renderer]}?url=#{request[:url]}"
               end
 
-    renderer[:include] == :none ? content : "<html><body>#{content}</body></html>"
+    erb renderer[:include] == :none ? content : "#{content}"
   end
 
   get "/render/:type" do |type|
